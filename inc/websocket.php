@@ -68,11 +68,11 @@
                // $.post('/emit/captions',$('#messages li:first').after(data));
                 console.log('Twitter content' + tweet);
                 if(post == globalPostId && tweet.indexOf(stringCatch) != -1){
-                    console.log('TWEET TWEET');
+                    console.log('TWEET');
                     $.post('/emit/captions', $('#messages li:first').before('<li class="question_post twitter">' + tweet + '</li>'));
                 }
                 else if(post == globalPostId){
-                    console.log('imageeeee');
+                  
                     $.post('/emit/captions', $('#messages li:first').before( '<li class="question_post"><a href="' + link +'"><img src="' + image + '"></li>'));
                 }
                 var images = data['images'];
