@@ -1,0 +1,43 @@
+{
+    "key": "group_59aea5d42c207",
+    "title": "360 Video",
+    "fields": [
+        {
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ".mp4",
+            "key": "field_59aea5d93fa6f",
+            "label": "Video",
+            "name": "video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "experience"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1504617982
+}

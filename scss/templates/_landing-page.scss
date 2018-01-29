@@ -1,0 +1,751 @@
+//*{
+//    border: solid 1px black;
+//}
+html {
+    margin-top: 0 !important;
+}
+
+body {
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    z-index: -99999999999;
+}
+
+header {
+    width: 100% !important;
+}
+
+header.featured_image {
+    position: relative;
+    margin-top: -166px;
+    top: 0;
+    z-index: -1;
+    height: 525px;
+    .overlay {
+        background-color: black;
+        opacity: 0.25;
+        height: 525px;
+        width: 100%;
+        z-index: 1;
+        margin-top: -166px;
+    }
+    .title {
+        background-image: url('../img/paint-swish-orange.png');
+        position: relative;
+        left: 0;
+        right: 0;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        background-repeat: no-repeat;
+        z-index: 999;
+        background-size: 85vw;
+        line-height: 90px;
+        letter-spacing: 3px;
+        font-size: 4vw;
+        font-family: $reclaim;
+        background-size: contain;
+        height: 230px;
+        margin-top: -300px;
+        p.nameID {
+            font-size: 2vw;
+            top: 10%;
+        }
+        p.main_title {
+            top: 30%;
+
+        }
+        p {
+            position: absolute;
+            left: 0;
+            right: 0;
+            display: block;
+            max-height: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            opacity: 1 !important;
+            color: white;
+        }
+    }
+    .view_more {
+        position: relative;
+        z-index: 11111;
+        display: block;
+        background: none;
+        border: solid 2px;
+        border-color: $aston-redorange;
+        border-radius: 8px;
+        padding: 20px 95px;
+        cursor: pointer;
+        transition-timing-function: ease-in-out;
+        color: white;
+        max-width: 500px;
+        margin: 0 auto;
+
+    }
+    .view_more:hover {
+        background-color: $aston-redorange;
+        -webkit-transition: all 0.2s ease-in-out;
+    }
+
+}
+
+section {
+    .student__wrapper {
+        .student {
+            &--profiles {
+                width: 100%;
+                color: white;
+                font-family: $reclaim;
+                background-color: $aston-prussianblue;
+                text-align: center;
+                padding: 20px;
+                letter-spacing: 3px;
+                margin-bottom: -30px;
+                p {
+                    margin: 0;
+                    font-size: 4vw;
+                }
+            }
+
+            &--placeholder {
+                overflow: auto;
+                width: 100%;
+                ul.scroll {
+                    overflow-y: hidden;
+                    display: block;
+                    white-space: nowrap;
+                    li {
+                        color: white;
+                        display: inline-block;
+                        width: 25%;
+                        margin: 30px 0;
+                        margin-bottom: -7px;
+                        .height {
+                            background-image: url('../img/blue_square.png');
+                            background-size: 280px 280px;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                        .vertical-center {
+                            max-width: 280px;
+                            max-height: 280px;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        h3 {
+                            font-family: $reclaim;
+                            font-size: 2em;
+                        }
+                        .internal_wrap {
+                            img {
+                                position: relative;
+                                z-index: -1;
+                            }
+                            display: table;
+                            width: 100%; //height: 100%;
+                            overflow: hidden;
+                            .content {
+                                display: table-cell;
+                                text-align: center;
+                                vertical-align: middle;
+                            }
+                            #play {
+                                color: white;
+                                font-size: 2em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+    .sign_up {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        margin: 0;
+        background-color: #d7d7d7;
+        h2 {
+            text-align: center;
+            font-family: $reclaim;
+            padding: 10px;
+            color: $aston-deepcyan;
+            font-size: 3vw;
+            letter-spacing: 2px;
+
+        }
+        .sign_up_wrapper {
+
+            .dropdown {
+                @include grid-container;
+                @include grid-collapse;
+                .gfield,
+                .gform_footer {
+                    @include grid-column(12);
+                    @include grid-media($small) {
+                        @include grid-column(3);
+                        input {
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                    display: inline-block;
+                    background-color: none;
+                    .ginput_container {
+                        .gfield_select {
+                            background-color: $white;
+                            height: 35px;
+
+                            border-radius: 0;
+                        }
+                    }
+                }
+                input {
+                    text-align: left;
+                }
+                .gform_footer {
+                    transition-timing-function: ease-in-out;
+                    display: inline-block;
+                    input {
+                        padding: 5px 35%;
+                        margin-top: 8px;
+                        background-color: rgba(255, 255, 255, 0);
+                        color: white;
+                        border: solid 2px $aston-prussianblue;
+                        margin-right: -20px;
+                    }
+                }
+                #gform_submit_button_1:hover {
+                    background-color: $aston-prussianblue;
+                    -webkit-transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+section#live_experience {
+    overflow: scroll;
+    .live_experience_wrapper {
+        overflow: auto;
+        width: 100%;
+        overflow-y: hidden;
+        ul.scroll {
+            display: block;
+            white-space: nowrap;
+            li {
+                z-index: 9999999;
+                display: inline-block;
+                width: 25%;
+                margin: 30px 0;
+                padding: 0 40px;
+                h3 {
+                    font-family: $reclaim;
+                    font-size: 2vw;
+                }
+                .internal_wrap {
+                    img {
+                        position: relative;
+                        z-index: -1;
+                    }
+                    display: table;
+                    width: 100%; //height: 100%;
+                    overflow: hidden;
+                    .content {
+                        display: table-cell;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                    #play {
+                        color: white;
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section#promo1 {
+    position: relative;
+    .promotion_1 {
+        @include grid-container;
+        display: block;
+        .promotion_swish_1_container {
+            @include grid-column(4);
+            display: inline-block;
+            float: right;
+            .swish_position_1 {
+                height: 100%;
+                left: 0;
+                overflow: hidden;
+                width: 100%;
+                position: absolute;
+                display: inline-block;
+                .promotion_swish_1 {
+                    height: 45%;
+                    left: 30%;
+                    position: absolute;
+                    background-image: url('../img/teal_paint_swish2.png');
+                    opacity: 0.9;
+                    width: 90%;
+                    text-align: center;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-family: $reclaim;
+                        font-size: 3vw;
+                        color: white;
+                        line-height: 20px;
+                        margin-top: 90px;
+                        padding-top: 0;
+
+                    }
+
+                }
+            }
+        }
+        .promotion_image_1 {
+            background-size: contain !important;
+            z-index: -3;
+            float: none;
+            margin-left: 0;
+            @include grid-column(8);
+
+        }
+
+    }
+}
+
+.promotion_height {
+    height: 500px;
+}
+
+section#promo2 {
+    margin-top: -30em;
+    position: relative;
+    .promotion_2 {
+        @include grid-container;
+        display: block;
+        .promotion_swish_2_container {
+            @include grid-column(4); //float: none !important;
+            .swish_position_2 {
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: -20%;
+                margin-top: 5em;
+                .promotion_swish_2 {
+                    background-repeat: no-repeat;
+                    background-image: url('../img/blue_paint_swish2.png');
+                    opacity: 0.9;
+                    width: 100%;
+                    background-position: center;
+                    background-size: contain;
+                    position: absolute;
+                    left: -10%;
+                    z-index: 2;
+                    top: 50%;
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-family: $reclaim;
+                        font-size: 3vw;
+                        color: white;
+                        margin-top: 30px;
+                        padding-top: 0;
+
+                    }
+
+                }
+            }
+        }
+        .promotion_image_2 {
+            background-size: contain !important;
+            @include grid-column(8);
+            display: inline-block;
+            float: right;
+            margin-top: -5em;
+            margin-right: -100px;
+        }
+    }
+}
+
+section {
+    .question_banner {
+        z-index: 1;
+        width: 100%;
+        background-color: $aston-redorange;
+        color: white;
+        clear: both;
+        text-align: center;
+        padding: 45px;
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .openday_wrapper {
+        background-color: #ececec;
+        .book_open_day {
+            text-align: center;
+            padding: 30px;
+            display: block;
+            margin: 0 auto;
+            max-width: 400px;
+
+            h4 {
+                color: $aston-deepcyan;
+                font-family: $reclaim;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            button {
+                border: solid 4px $aston-deepcyan;
+                padding: 15px 55px;
+                border-radius: 15px;
+                background-color: inherit;
+                color: $aston-deepcyan;
+                transition-timing-function: ease-in-out;
+
+            }
+            button:hover {
+                background-color: $aston-deepcyan;
+                color: white;
+                -webkit-transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1130px) {
+    section {
+        .student__wrapper {
+            .student {
+                &--placeholder {
+                    ul.scroll {
+                        li {
+                            .height {
+                                background-size: 220px 220px;
+                            }
+                            .vertical-center {
+                                max-width: 200px;
+                                max-height: 200px;
+                            }
+                            h3 {
+                                font-size: 1.75em;
+                            }
+                            p {
+                                font-size: 0.8em;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    section {
+        .live_experience_wrapper {
+
+
+            ul.scroll {
+                li {
+                    .internal_wrap {
+                        .height {
+                            .vertical-center {
+                                h3 {
+                                    font-size: 1.3em;
+                                }
+                                p {
+                                    font-size: 0.6em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width:750px) {
+    .ginput_container {
+        input.medium:placeholder {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+        .student--placeholder {
+        .overlay {
+            opacity: 1 !important;
+        }
+    }
+    header.featured_image {
+        .title {
+            p.nameID {
+                top: 0;
+            }
+            p.main_title {
+                top: 15%;
+            }
+        }
+        button.view_more {
+            margin-top: -10%;
+        }
+    }
+    section#live_experience {
+        .live_experience_wrapper {
+
+            ul.scroll {
+
+                li {
+                    width: 50%;
+                    .vertical-center {
+                        h3 {
+                            font-size: 3vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section {
+        .student__wrapper {
+            .student {
+                &--placeholder {
+                    ul.scroll {
+                        li {
+                            width: 50%;
+                            .height {
+                                background-size: 300px 300px;
+                            }
+                            .vertical-center {
+                                max-width: 300px;
+                                max-height: 300px;
+                            }
+                            h3 {
+                                font-size: 3em;
+                                padding-bottom: 5px;
+                            }
+                            p {
+                                font-size: 1em;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    section {
+        .sign_up {
+            .sign_up_wrapper {
+                .dropdown {
+                    .gform_footer {
+                        transition-timing-function: ease-in-out;
+                        display: inline-block;
+                        input {
+                            width: 100%;
+                            text-align: center;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#promo1 {
+        .promotion_1 {
+            .promotion_swish_1_container {
+                .swish_position_1 {
+                    .promotion_swish_1 {
+                        left: 20%;
+                        span {
+                            font-size: 4vw;
+                        }
+                    }
+                }
+            }
+            .promotion_image_1 {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                background-size: cover !important;
+            }
+        }
+    }
+
+
+
+    section#promo2 {
+        margin-top: 0;
+        .promotion_2 {
+
+            .promotion_swish_2_container {
+
+                .swish_position_2 {
+                    top: 0;
+                    .promotion_swish_2 {
+                        left: 0 !important;
+                        top: 0;
+                        span {
+                            font-size: 4vw;
+                            padding-left: 50px;
+                        }
+
+                    }
+                }
+            }
+            .promotion_image_2 {
+                width: 100% !important;
+                float: none !important;
+                margin-left: 0;
+                position: absolute;
+                left: 0;
+                background-size: cover !important;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    header.featured_image {
+        .title {
+            p.nameID {
+                top: -5px;
+            }
+            p.main_title {
+                top: 5%;
+            }
+        }
+        button.view_more {
+            margin-top: -20%;
+        }
+    }
+    section#live_experience {
+        .live_experience_wrapper {
+            ul.scroll {
+                li {
+                    width: 100%;
+                    .vertical-center {
+                        h3 {
+                            font-size: 10vw;
+                        }
+                        p {
+                            font-size: 4vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        .student__wrapper {
+            .student {
+                &--placeholder {
+                    ul.scroll {
+                        li {
+                            width: 100%;
+                            .height {
+                                background-image: url('../img/blue_paint_swish_opa.png');
+                                background-size: 500px 109px;
+                                background-position: -40%;
+                                background-repeat: no-repeat;
+                                text-align: left;
+                            }
+                            .vertical-center {
+                                max-width: 300px;
+                                max-height: 300px;
+                                left: 27%;
+                                transform: translate(0, -50%);
+                                width: 420px;
+                            }
+                            h3 {
+                                font-size: 2em;
+                                margin-top: -10px;
+                            }
+                            p {
+                                font-size: 1em;
+                                width: 400px;
+                                margin-left: 5px;
+                                padding-right: 30px;
+                                margin-top: -30px;
+                            }
+                            #play {
+                                position: absolute;
+                                right: -150px;
+                                top: 25%;
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header.featured_image {
+        .title {
+            p.nameID {
+                top: -20px;
+                margin-top: 0;
+            }
+            p.main_title {
+                top: 0%;
+            }
+        }
+
+        button.view_more {
+            margin-top: -30%;
+            padding: 10px 50px;
+        }
+    }
+
+    .promotion_swish_2 {
+
+        span {
+            margin-top: 10px !important;
+        }
+
+    }
+    .promotion_swish_1 {
+        span {
+            margin-top: 100px !important;
+            line-height: 10px !important;
+        }
+    }
+}

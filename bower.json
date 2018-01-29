@@ -1,0 +1,41 @@
+{
+  "name": "glass",
+  "description": "SMILE Wordpress Starter Theme",
+  "main": "style.css",
+  "authors": [
+    "Warren Reeves"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "starter",
+    "wordpress",
+    "theme"
+  ],
+  "homepage": "http://wearesmile.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0",
+    "bourbon": "v5.0.0.beta.7",
+    "neat": "^2.0.0",
+    "jQuery": "^3.2.1",
+    "slick-carousel": "^1.6.0",
+    "html5shiv": "^3.7.3",
+    "selectivizr": "^1.0.2",
+    "respond": "^1.4.2",
+    "REM-unit-polyfill": "^1.3.4",
+    "font-awesome": "fontawesome#^4.7.0",
+    "smoothscroll": "^0.3.4",
+    "requestAnimationFrame": "^0.0.23",
+    "dropzone": "^4.3.0",
+    "objectFitPolyfill": "^2.0.5",
+    "swiper": "^4.0.3",
+    "moment-timezone": "^0.5.14"
+  }
+}

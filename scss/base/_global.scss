@@ -1,0 +1,49 @@
+.hidden,
+.no-js .js-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &--fixed {
+        position: fixed;
+    }
+}
+
+
+.vertical-center {
+    transition-timing-function: ease-in-out;
+    position: absolute !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 9999999;
+    padding: 0 2em;
+    white-space: normal;
+}
+
+.height {
+    height: 100%;
+    text-align: center;
+}
+
+.oneoverone, .sixteennine {
+    position: relative;
+
+}
+
+.oneoverone:after {
+    padding-top: 100%;
+    display: block;
+    content: '';
+}
+
+.sixteennine:after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}

@@ -1,0 +1,113 @@
+.faux-link__element {
+    position: relative;
+    a {
+        position: relative;
+        z-index: 1;
+    }
+    .faux-link__overlay-link {
+        position: absolute;
+
+        bottom: 0;
+        display: block;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        right: 0;
+        text-indent: 200%;
+        top: 0;
+        visibility: visible;
+        white-space: nowrap;
+        z-index: 2;
+    }
+} 
+
+.ratiocontent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+}
+
+.overlay {
+    &:before {
+        transition-timing-function: ease-in-out;
+        content: ' ';
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &.dark {
+        color: white;
+        &:before {
+            background: $aston-redorange-trans;
+        }
+    }
+}
+
+.border-radius--circle {
+    border-radius: 50%;
+}
+
+.vertical-center {
+    transition-timing-function: ease-in-out;
+    position: absolute !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 9999999;
+    padding: 0 2em;
+    white-space: normal;
+}
+
+.height {
+    height: 100%;
+    text-align: center;
+}
+
+.oneoverone {
+    position: relative;
+
+}
+
+.oneoverone:after {
+    padding-top: 100%;
+    display: block;
+    content: '';
+}
+
+.overlay {
+    opacity: 0;
+}
+
+.overlay:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.pagination {
+    * {
+        margin: 0 5px;
+    }
+	display: inline-block;
+    text-align: center;
+	width: 100%;
+	color: $action-color;
+	padding: 20px;
+    font-family: $heading-font-family;
+    .current {
+        font-weight: 700;
+    }
+	a {
+		color: $action-color;
+        font-family: $heading-font-family;
+	}
+}

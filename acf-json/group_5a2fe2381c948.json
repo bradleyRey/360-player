@@ -1,0 +1,104 @@
+{
+    "key": "group_5a2fe2381c948",
+    "title": "Students Section",
+    "fields": [
+        {
+            "sub_fields": [
+                {
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "key": "field_59fb15b29d12c",
+                    "label": "gallery",
+                    "name": "gallery",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "default_value": "",
+                    "delay": 0,
+                    "key": "field_59fb16499d12d",
+                    "label": "caption",
+                    "name": "caption",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "default_value": "",
+                    "placeholder": "",
+                    "key": "field_59fb17a2154cb",
+                    "label": "link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ],
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "collapsed": "",
+            "key": "field_59fb0a1c05449",
+            "label": "Student Slider",
+            "name": "student_slider",
+            "type": "repeater",
+            "instructions": "Please add student profile information to make a slider",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1513089898
+}

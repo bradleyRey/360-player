@@ -1,0 +1,9 @@
+.DS_Store
+scss/.sass-cache
+scss/neat/*
+css/*
+bourbon
+config.codekit
+node_modules/*
+bower_components/*
+js/socket-server/node_modules/*

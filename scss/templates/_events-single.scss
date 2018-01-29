@@ -1,0 +1,321 @@
+.top_bar {
+    top: 50px;
+    position: relative;
+    display: block;
+    a.back_button {
+        display: inline-block;
+        padding: 12px;
+        color: white;
+        background-color: $aston-redorange;
+        z-index: 9999;
+        position: absolute;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        &:before {
+            content: "\f053";
+            font-family: FontAwesome;
+            cursor: pointer;
+        }
+    }
+    .notification {
+        left: 45px;
+        opacity:0;
+
+        transition-timing-function: ease;
+        transition: opacity 1s;
+        position: absolute;
+        z-index: 1;
+        display: inline-block;
+        p {
+            margin: 0;
+            padding: 8px;
+            background-color: $aston-redorange;
+            color: white;
+            border-radius: 1em;
+            i.fa.fa-refresh {
+                font-size: 2em;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.fb-notification{
+    background-color: $aston-redorange;
+    color: $white;
+    text-align: center;
+}
+
+
+body.single-events {
+
+    &.live {
+        // LIVE STYLING HERE
+        .video360 {
+            overflow: hidden;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+
+            height: 100vh; // look at compatibility of this
+            z-index: -1;
+
+            .height {
+                position: relative;
+                .vertical-center {
+                    padding: 0;
+
+                }
+            }
+
+            .livefb {
+                iframe {
+                    border: none;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    margin-top: -60px;
+                }
+            } // square cropped thing with black bg
+        }
+    }
+    &.not-live {
+        // NOT LIVE STYLING HERE
+        .chat_wrapper {
+            margin-right: 0 !important;
+            .video360 {
+
+                z-index: -1111; // fullscreen absolute posotion thing
+                #video {
+                    width: 100%;
+
+                    canvas {
+                        left: 0 !important;
+                        width: 70% !important;
+                    }
+                    .controlsWrapper {
+
+                        .controls {
+                            display: block;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    } // NOW SOME GLOBAL STYLES
+    main {
+
+        &.chat_wrapper {
+
+
+            //@include grid-collapse; // separate this
+            .chat_room {
+                .logo {
+                    width: 100%;
+                }
+                transition-timing-function: ease;
+                transition-duration: 0.2s;
+                transition-property: margin width;
+                width: 400px;
+                font-size: 13px;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: white;
+                position: fixed;
+                padding: 0; // NATHANS FLEX MAGIC
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                .message_wrapper {
+                    height: 100%;
+                    // NATHANS FLEX MAGIC
+                    overflow: scroll;
+                    ul#messages::before {
+                        background-color: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+                        background-color: -o-linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+                        background-color: linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+
+                    }
+                    ul#messages {
+                        padding: 1em;
+
+                        li {
+                            text-align: left;
+                            line-height: 25px;
+                            .q_and_a_title {
+                                font-weight: 700;
+
+                            }
+                            p {
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+                .question_wrapper {
+                    display: block;
+                    padding: 1em;
+                    flex: 0 1 auto;
+                    background-color: #efefef;
+
+                    form {
+                        input#m {
+                            margin-bottom: 0;
+                            text-align: center;
+                            border: 3px solid;
+                            border-color:$aston-redorange;
+                            bottom: 0;
+                            width: 100%;
+                        }
+                        input#m::placeholder {
+                            color: black;
+                        }
+                    }
+                    p.event_over{
+                        text-align: center;
+                        border-color: $aston-redorange;
+                        border: 3px solid;
+                        margin-bottom: 0;
+                        bottom: 0;
+                        color: black;
+                        padding: 4px;
+                    }
+                }
+            }
+            .video360 {
+
+                //                    @include grid-column(9);
+                //                    //border: solid 3px #adadad;
+                //                    height: 450px;
+                .fb_iframe_widget_fluid_desktop {
+                    max-width: 140% !important;
+                    right: 25% !important;
+                }
+            }
+        }
+
+        article {
+            padding-top: 25px;
+            text-align: left;
+            padding-left: 15px;
+            h1 {
+                a {
+                    color: rgb(249, 182, 145);
+                }
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .panolens-container {
+        canvas {
+            width: 100% !important;
+            height: calc( 100% - 300px) !important;
+        }
+    }
+    a.back_button {
+        display: none;
+    }
+
+    body.single-events {
+        main {
+            &.chat_wrapper {
+                .chat_room {
+                    width: 100%;
+                    bottom: 0;
+                    top: auto;
+                    height: 300px;
+                    .logo {
+                        a {
+                            img {
+                                max-width: 144px;
+                            }
+                        }
+                    }
+                    .message_wrapper {
+                        ul {
+                            display: block;
+                            margin: auto 20%;
+                            max-width: 1000px;
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+
+
+@media screen and (max-width: 800px) {
+    .top_bar{
+        top: 70px;
+    }
+
+    body.single-events {
+        -webkit-overflow-scrolling: touch;
+        main {
+            &.chat_wrapper {
+                .chat_room {
+                    top: 80%;
+                    position: absolute;
+                    height: 300px;
+                    overflow: visible;
+                    -webkit-overflow-scrolling: touch;
+                    .message_wrapper {
+                        height:auto;
+                        overflow:visible;
+                        background-color: #fff;
+                        ul {
+                            display: block;
+                            margin: auto 0;
+                            max-width: 1000px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+            .livefb {
+                iframe {
+                    border: none;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 50vh;
+                }
+            }
+    .panolens-container{
+        canvas{
+            height: 300px !important;
+        }
+    }
+
+}
+
+.panolens-container {
+    z-index: -99999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}

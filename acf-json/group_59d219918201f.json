@@ -1,0 +1,176 @@
+{
+    "key": "group_59d219918201f",
+    "title": "Events Details",
+    "fields": [
+        {
+            "default_value": 0,
+            "message": "",
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_5a0c393f44f75",
+            "label": "Is it live?",
+            "name": "is_it_live",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_5a0c3a6544f78",
+            "label": "Live Embed URL",
+            "name": "live_embed_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a0c393f44f75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_5a0c3aa644f79",
+            "label": "360 Video File",
+            "name": "360_video_file",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a0c393f44f75",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_5a1d7b1f8a791",
+            "label": "Video Snippet",
+            "name": "video_snippet",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "display_format": "Y-m-d H:i:s",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1,
+            "key": "field_5a1ffcca36170",
+            "label": "Start Date",
+            "name": "start_date",
+            "type": "date_time_picker",
+            "instructions": "Pick a date and time you would like your experience to begin",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "display_format": "Y-m-d H:i:s",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1,
+            "key": "field_5a1ffd3136171",
+            "label": "End Date",
+            "name": "end_date",
+            "type": "date_time_picker",
+            "instructions": "Pick a date and time you would like the experience to conclude",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [
+                "events"
+            ],
+            "taxonomy": [],
+            "min": "",
+            "max": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "return_format": "object",
+            "key": "field_5a251b47a5cad",
+            "label": "Related Events",
+            "name": "related_events",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "events"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1513680987
+}

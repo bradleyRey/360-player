@@ -1,0 +1,41 @@
+#video.valiant {
+	position: absolute;
+	width: 70% !important ;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+    z-index: -1;
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+}
+.controls{
+    display: block !important;
+}
+
+.Valiant360_default {
+	.controlsWrapper {
+		z-index: 3;
+	}
+	&:hover .controlsWrapper {
+		height: 48px;
+        .controls{
+            height: 40px;
+
+        }
+	}
+}
+.slick-slider {
+    button {
+        visibility: hidden;
+    }
+}
+
+
+@media (max-width: 900px) {
+	#video.valiant {
+		width: 100%;
+        height: calc( 100% - 300px);
+	}
+}
+

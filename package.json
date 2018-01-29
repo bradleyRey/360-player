@@ -1,0 +1,52 @@
+{
+  "name": "glass",
+  "version": "1.0.0",
+  "description": "SMILE Wordpress Starter Theme",
+  "main": "style.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/wearesmile/glass.git"
+  },
+  "keywords": [
+    "starter",
+    "wordpress",
+    "theme"
+  ],
+  "author": "Warren Reeves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/wearesmile/glass/issues"
+  },
+  "homepage": "https://gitlab.com/wearesmile/glass#README",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "browser-sync": "^2.6.1",
+    "es6-promise": "^4.0.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "simplebar": "^2.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.1.2",
+    "three": "^0.86.0",
+    "tween.js": "^16.6.0",
+    "iphone-inline-video": "^2.2.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "http-parser-js": "^0.4.9",
+    "videojs-panorama": "^0.1.7",
+    "videojs-vr": "^1.0.2"
+  }
+}

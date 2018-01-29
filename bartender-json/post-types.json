@@ -1,0 +1,17 @@
+{
+	"Student":{
+		"single":"Student",
+		"plural":"Students",
+		"args":{
+			"menu_icon":"dashicons-id-alt",
+			"supports":[
+				"thumbnail",
+                "title",
+                "editor"
+			]
+		},
+		"labels":{
+			"add_new":"New Student"
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.logo {
+    .toggle_eye {
+
+        text-align: center;
+        background-color: $aston-redorange;
+        position: absolute;
+        left: -100px;
+        top: 125px;
+        height: 30px;
+        width: 170px;
+        padding: 5px;
+        transform: rotate(90deg);
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        color: white;
+        font-weight: 200;
+        letter-spacing: 2px;
+        cursor: pointer;
+
+    }
+
+    padding: 1em;
+    display: block;
+    background-color: #efefef;
+    flex: 0 1 auto;
+    a {
+        z-index: 111;
+        position: relative;
+        margin-top: 25px;
+        img {
+
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin: 0 auto;
+
+        }
+    }
+
+}
+
+.logo {
+    .toggle_eye:after {
+        content: 'CLOSE';
+    }
+}
+
+#toggle_eye:checked ~ { 
+    .chat_wrapper {
+        #video.valiant { 
+            width: 100% !important;
+        } 
+        .chat_room {
+            transition-timing-function: ease;
+            transition-duration: 0.2s;
+            transform: translateX(100%);
+        }
+    }
+ 
+}
+
+#toggle_eye:checked ~ {
+    .chat_wrapper {
+        .chat_room {
+            .logo {
+                .toggle_eye:after {
+                    content: 'GOT A QUESTION?';
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logo {
+        .toggle_eye {
+            display: none;
+        }
+    }
+}

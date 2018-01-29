@@ -1,0 +1,158 @@
+
+.chat_wrapper_early {
+    background-color: $colour--grey;
+    //overflow: auto;
+    .not_ready_wrapper {
+        z-index: 1;
+        color: white;
+        display: table;
+        margin: 0 auto;
+        text-align: center;
+        height: 100%;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .content_wrapper {
+            margin-top: 25%;
+
+            p.message_content {
+                display: block;
+                vertical-align: middle;
+                line-height: normal;
+                font-size: 2em;
+                display: block;
+
+            }
+            p.when_ready {
+                top: 60%;
+                right: 0;
+                left: 0;
+                display: block;
+                vertical-align: middle;
+                line-height: normal;
+                font-size: 2em;
+                vertical-align: middle;
+                padding-top: 20px;
+                font-size: 1.5em;
+                border: solid 3px $aston-redorange;
+                padding: 1em;
+                border-radius: 1em;
+            }
+            ul.archive {
+                display: block;
+                width: 100%;
+                text-align: left;
+                li {
+                    margin-top: 20px;
+                    display: table;
+                    position: relative;
+                    img {
+                        border-radius: 155px
+                    }
+                    .description_wrapper {
+                        display: table-cell;
+                        position: relative;
+                        margin-top: 10%;
+                        padding-left: 1em;
+                        vertical-align: middle;
+                        a.title_pre_event {
+                            font-size: 21pt;
+                            padding-bottom: 1em;
+                            color: white;
+                            vertical-align: middle;
+                        }
+                        p {
+                            margin-top: 10px;
+                            color: white;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+     #early_back_button {
+            display: none;
+        }
+}
+
+@media screen and (max-width: 520px) {
+    .chat_wrapper_early {
+
+
+        .not_ready_wrapper {
+
+            .content_wrapper {
+                margin-top: 20%;
+                p.message_content {
+
+                }
+                p.when_ready {
+                    margin-left: 20px;
+
+                }
+                ul.archive {
+
+                    li {
+                        margin-bottom: 12px;
+
+                        img {
+                            width: 150px;
+                            height: 150px;
+                        }
+                        .description_wrapper {
+                            padding-left: 10px;
+
+                            a.title_pre_event {}
+                            p {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .chat_wrapper_early {
+
+        .not_ready_wrapper {
+
+            .content_wrapper {
+                margin-top: 20%;
+                p.message_content {
+
+                }
+                p.when_ready {
+                    margin-left: 20px;
+                }
+                ul.archive {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+
+                    li {
+                        display: block;
+                        margin: 0 auto;
+                        max-width: 300px;
+                        img {
+                            width: 150px;
+                            height: 150px;
+                        }
+                        .description_wrapper {
+                            padding: 0;
+                            display: block;
+                            a.title_pre_event {}
+                            p {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
